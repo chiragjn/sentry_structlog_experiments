@@ -20,6 +20,7 @@ def home(request: HttpRequest, mode: str) -> HttpResponse:
     logger.info(f'{mode} - breadcrumb 1')
     logger.info(f'{mode} - breadcrumb 2')
     logger.info(f'{mode} - breadcrumb 3')
+    logger.error(f'{mode} - exception less error line!')
     try:
         1 / 0
     except ZeroDivisionError:
