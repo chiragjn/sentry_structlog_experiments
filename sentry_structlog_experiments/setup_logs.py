@@ -21,7 +21,6 @@ FOREIGN_PRE_CHAIN_PROCESSORS = (  # For logs being emitted from logging.Logger b
     structlog.processors.TimeStamper(fmt='iso'),
     structlog.stdlib.add_log_level,
     structlog.processors.StackInfoRenderer(),
-    SentryJsonProcessor(level=logging.ERROR, as_extra=False, tag_keys=None),
     structlog.processors.format_exc_info,
     structlog.processors.UnicodeDecoder(),
     add_module_and_lineno,
